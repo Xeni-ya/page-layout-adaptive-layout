@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.body {
+    display: grid;
+    grid-template: 15% 1fr 20% / 1fr 30%;
+}
+
+.header {
+    background-color: #e0e0e0;
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: #fff8e3;
+    display: grid;
+    grid-template: 1fr 10% 10% / 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.main__content {
+    grid-column: span 2;
+}
+
+[class^="container"] {
+    background-color: bisque;
+    padding: 2% 1%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-3 {
+    grid-column: span 2;
+}
+
+.aside {
+    background-color: #ddeccb;
+    padding: 1rem;
+}
+
+.footer {
+    background-color: #e0e0e0;
+    grid-column: span 2;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.footer > div {
+    background-color: #fafafa;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 1%;
+}
+
+@media screen and (max-width: 425px) {
+    .body {
+        grid-template: auto / 1fr;
+    }
+
+    .footer {
+        /*автоматическое изменение столбцов подвала*/
+        grid-template-columns: auto;
+    }
+}
