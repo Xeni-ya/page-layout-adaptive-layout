@@ -72,7 +72,7 @@ body {
 
 @media screen and (max-width: 425px) {
     .body {
-        grid-template: auto / 1fr;
+        grid-template: auto-fit / 1fr;
     }
 
     .footer {
